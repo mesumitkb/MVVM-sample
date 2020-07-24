@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/issueListFragment">
+    <fragment
+        android:id="@+id/issueListFragment"
+        android:name="com.example.acsassignment.view.IssueListFragment"
+        android:label="Issues"
+        tools:layout="@layout/fragment_issue_list" >
+        <action
+            android:id="@+id/action_issue_detail"
+            app:destination="@id/issueDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/issueDetailFragment2"
+        android:name="com.example.acsassignment.view.IssueDetailFragment"
+        android:label="Issue Comments"
+        tools:layout="@layout/fragment_issue_detail">
+        <argument
+            android:name="myArg"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
